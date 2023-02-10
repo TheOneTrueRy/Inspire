@@ -1,0 +1,35 @@
+/* SECTION Elements & Others */
+
+
+
+/* SECTION Classes */
+
+
+
+/* SECTION IDs */
+
+#top{
+height: 25vh;
+}
+
+#middle{
+height: 35vh;
+}
+
+#bottom{
+  height: 40vh;
+}
+
+#clock{
+  font-size: 4.5em;
+  cursor: pointer;
+  text-shadow: 2px 2px 4px black;
+}
+
+#quote{
+  text-shadow: 2px 2px 2px black;
+}
+
+#author{
+  text-shadow: 2px 2px 2px black;
+}
