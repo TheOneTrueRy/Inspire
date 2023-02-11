@@ -6,33 +6,37 @@
 
 .todoCard{
   background-color: rgba(0, 0, 0, 0.529);
-  height: 100%;
+  max-height: 100%;
   width: 100%;
 }
 
 .todoList{
-  overflow-y: scroll;
-  height: 45%;
+  height: 70%;
 }
 
-.todoList::-webkit-scrollbar{
-  display: none;
-}
 
-/* TODO STYLE CHECKBOXES! */
+.myBtn{
+  height: 50%;
+  border: 1px solid white;
+  margin-bottom: 0.3rem;
+}
 
 /* SECTION IDs */
 
 #top{
-height: 25vh;
+  height: 25vh;
 }
 
 #middle{
-height: 35vh;
+  height: 35vh;
 }
 
 #bottom{
   height: 40vh;
+}
+
+#bottom *{
+  max-height: 40vh;
 }
 
 #clock{
@@ -50,5 +54,23 @@ height: 35vh;
 }
 
 #todo{
-  height: 40%;
+  height: 50%;
+  width: 75%;
+}
+
+#todoList{
+  overflow-y: scroll;
+  max-height: 100%;
+}
+
+#todoList::-webkit-scrollbar{
+  display: none;
+}
+
+#todoTop{
+  height: 10%;
+}
+
+#todoBottom{
+  height: 20%;
 }

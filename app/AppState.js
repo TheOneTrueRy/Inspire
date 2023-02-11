@@ -15,7 +15,7 @@ class AppState extends EventEmitter {
   values = loadState('values', [Value])
 
   /** @type {import('./Models/Todo').Todo[]} */
-  todos = 
+  todos = []
 }
 
 export const appState = new Proxy(new AppState(), {

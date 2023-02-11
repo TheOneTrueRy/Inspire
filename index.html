@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="icon" href="https://www.pngitem.com/pimgs/b/16-162883_twinkle-stars-png.png">
+  <link rel="icon" href="https://www.hartselletigers.org/cms/lib/AL02210041/Centricity/Domain/12/orange-star-vector-clipart.png">
   <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/7.1.96/css/materialdesignicons.min.css"
     integrity="sha512-NaaXI5f4rdmlThv3ZAVS44U9yNWJaUYWzPhvlg5SC7nMRvQYV9suauRK3gVbxh7qjE33ApTPD+hkOW78VSHyeg=="
@@ -34,22 +34,20 @@
             <span id="author" class="on-hover text-center"></span>
           </div>
         </div>
-        <div class="col-4 pb-2 offset-1 px-5">
+        <div class="col-3 fuck pb-2 offset-2 px-5 d-flex justify-content-end">
           <div class="row rounded todoCard text-light text-center">
-            <div class="col-12 pt-2">
+            <div id="todoTop" class="col-12 pt-2 px-4 d-flex justify-content-between">
               <span class="fs-5">Your TODO's</span>
-            </div>
-            <div class="col-12 pb-2">
-              <span>(5 left)</span>
+              <span id="todoNum"></span>
             </div>
             <div class="col-12 todoList px-2">
-                <input type="checkbox" id="todoCB">
-                <span class="fs-5">12345678901234567890</span>
+              <div id="todoList" class="row">
+              </div>
             </div>
-            <div class="col-8 offset-2 pt-1 d-flex justify-content-center">
-              <form onsubmit="app.todoController.addTodo()">
-                <input id="todo" name="todo" type="text" class="form-control mb-1">
-                <button type="submit" class="btn bg-black text-light">Submit</button>
+            <div id="todoBottom" class="col-12 pt-1 d-flex justify-content-center align-items-top">
+              <form class="w-100" onsubmit="app.todoController.addTodo()">
+                <input id="todo" name="todo" type="text" class="rounded">
+                <button type="submit" class="bg-black text-light myBtn rounded">Submit</button>
               </form>
             </div>
           </div>
