@@ -11,7 +11,7 @@ class WeatherService{
   }
   async getWeather() {
     const res = await sandboxApi.get('/weather')
-    console.log(res);
+    console.log(res.data);
   }
 
 }
