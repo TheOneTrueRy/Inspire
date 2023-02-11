@@ -13,16 +13,16 @@ class ClockService{
     appState.currentTime = new Date()
     let hours = appState.currentTime.getHours()
     let minutes = appState.currentTime.getMinutes()
-    let standardHours = (hours - 12)
     let time = hours + ':' + minutes
     if(minutes < 10){
       minutes = '0' + minutes
     }
     if(appState.clockMode == 'standard'){
       if(hours > 12){
+        let standardHours = (hours - 12)
         time = standardHours + ':' + minutes + 'pm'
       }else{
-        time = standardHours + ':' + minutes + 'am'
+        time = hours + ':' + minutes + 'am'
       }
     }else{
       time = hours + ':' + minutes
