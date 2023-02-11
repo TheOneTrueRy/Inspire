@@ -28,18 +28,29 @@
         </div>
       </div>
       <div id="bottom" class="row">
-        <div class="col-3">
-        </div>
-        <div class="col-6 d-flex justify-content-center align-items-end">
+        <div class="col-6 offset-1 d-flex justify-content-center align-items-end">
           <div class="d-flex flex-column text-light pb-3">
             <span id="quote" class="fs-5 pb-3 text-center"></span>
             <span id="author" class="on-hover text-center"></span>
           </div>
         </div>
-        <div class="col-3">
-          <div class="todoCard">
-            <div class="todoList">
-              
+        <div class="col-4 offset-1 ps-5">
+          <div class="row todoCard text-light text-center">
+            <div class="col-12 pt-2">
+              <span class="fs-5">Your TODO's</span>
+            </div>
+            <div class="col-12 pb-2">
+              <span>(5 left)</span>
+            </div>
+            <div class="col-12 todoList px-2">
+                <input type="checkbox" id="todoCB">
+                <span class="fs-5">12345678901234567890</span>
+            </div>
+            <div class="col-8 offset-2 pt-1 d-flex justify-content-center">
+              <form onsubmit="app.todoController.addTodo()">
+                <input id="todo" name="todo" type="text" class="form-control mb-1">
+                <button type="submit" class="btn bg-black text-light">Submit</button>
+              </form>
             </div>
           </div>
         </div>

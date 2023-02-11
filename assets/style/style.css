@@ -4,7 +4,20 @@
 
 /* SECTION Classes */
 
+.todoCard{
+  background-color: rgba(0, 0, 0, 0.529);
+  height: 100%;
+  width: 100%;
+}
 
+.todoList{
+  overflow-y: scroll;
+  height: 45%;
+}
+
+.todoList::-webkit-scrollbar{
+  display: none;
+}
 
 /* SECTION IDs */
 
@@ -32,4 +45,8 @@ height: 35vh;
 
 #author{
   text-shadow: 2px 2px 2px black;
+}
+
+#todo{
+  height: 40%;
 }
