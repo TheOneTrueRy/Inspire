@@ -5,6 +5,8 @@ import { loadState } from "./Utils/Store.js"
 
 class AppState extends EventEmitter {
 
+  temperatureType = 'fahrenheit'
+
   currentTime = null
 
   clockMode = 'standard'
