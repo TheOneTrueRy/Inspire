@@ -93,3 +93,7 @@
   background-color: rgba(0, 0, 0, 0.658);
   cursor: pointer;
 }
+
+#weather{
+  text-transform: capitalize;
+}

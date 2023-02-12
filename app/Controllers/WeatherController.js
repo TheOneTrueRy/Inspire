@@ -11,7 +11,7 @@ function _drawWeather(){
   }else if(appState.temperatureType == 'kelvin'){
     setHTML('temperature', `<span class="fs-4">${appState.temperatureK} K</span>`)
   }
-  setHTML('weather', `<span class="fs-4">${appState.weather.main}</span><span class="fs-5">${appState.weather.description}</span>`)
+  setHTML('weather', `<span class="fs-5">${appState.weather.description}</span>`)
 }
 
 export class WeatherController{
