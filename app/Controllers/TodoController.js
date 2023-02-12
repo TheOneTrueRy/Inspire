@@ -8,6 +8,7 @@ function _drawTodos(){
   let template = ''
   appState.todos.forEach(t => template += t.TodoTemplate)
   setHTML('todoList', template)
+  setHTML('todoNum', `(${appState.todos.length} left)`)
 }
 
 export class TodoController{
@@ -32,6 +33,28 @@ export class TodoController{
       let form = event.target
       let formData = getFormData(form)
       await todoService.addTodo(formData)
+      // @ts-ignore
+      form.reset()
+    } catch (error) {
+      console.error(error)
+      Pop.error(error)
+    }
+  }
+
+  toggleCompleted(todoID){
+    try {
+      todoService.toggleCompleted(todoID)
+    } catch (error) {
+      console.error(error)
+      Pop.error(error)
+    }
+  }
+
+  async deleteTodo(todoID){
+    try {
+      if (await Pop.confirm('Are you sure you want to delete this TODO?')){
+        await todoService.deleteTodo(todoID)
+      }
     } catch (error) {
       console.error(error)
       Pop.error(error)

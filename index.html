@@ -46,7 +46,7 @@
             </div>
             <div id="todoBottom" class="col-12 pt-1 d-flex justify-content-center align-items-top">
               <form class="w-100" onsubmit="app.todoController.addTodo()">
-                <input id="todo" name="description" type="text" class="rounded">
+                <input required id="todo" name="description" type="text" class="rounded" maxlength="18">
                 <button type="submit" class="bg-black text-light myBtn rounded">Submit</button>
               </form>
             </div>
