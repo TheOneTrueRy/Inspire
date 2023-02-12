@@ -21,6 +21,14 @@
   margin-bottom: 0.3rem;
 }
 
+.myShadow{
+  text-shadow: 2px 2px 2px black;
+}
+
+.todoDesc{
+  height: 100%;
+}
+
 /* SECTION IDs */
 
 #top{
