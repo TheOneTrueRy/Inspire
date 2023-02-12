@@ -17,7 +17,7 @@ function _drawWeather(){
 export class WeatherController{
   constructor(){
     this.getWeather()
-    setTimeout(_drawWeather, 500)
+    setTimeout(_drawWeather, 1000)
     appState.on('temperatureType', _drawWeather)
   }
 
