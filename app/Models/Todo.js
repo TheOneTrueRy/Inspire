@@ -12,7 +12,7 @@ export class Todo{
       return `
       <div class="col-12 d-flex justify-content-between align-items center mt-1">
         <input checked type="checkbox" name="" id="" onclick="app.todoController.toggleCompleted('${this.id}')">
-        <span class="fs-5">${this.description}</span>
+        <span class="fs-5 completed">${this.description}</span>
         <button type="button" onclick="app.todoController.deleteTodo('${this.id}')" class="btn btn-danger"><i class="mdi mdi-delete"></i></button>
       </div>
       `

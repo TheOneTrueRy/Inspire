@@ -24,16 +24,11 @@
           <span class="myShadow">Image by</span>
           <p id="imgAuthor" class="myShadow"></p>
         </div>
-        <div class="col-2">
-          <div class="row">
-            <div class="col-12">
-
+        <div class="col-2 d-flex align-items-top justify-content-end pe-5 pt-4 text-light">
+          <div id="weatherCard" class="row rounded" onclick="app.weatherController.changeFormat()">
+            <div id="temperature" class="col-12 d-flex justify-content-center align-items-center">
             </div>
-            <div class="col-12">
-
-            </div>
-            <div class="col-12">
-
+            <div id="weather" class="col-12 d-flex flex-column text-center">
             </div>
           </div>
         </div>
@@ -60,7 +55,7 @@
               <div id="todoList" class="row">
               </div>
             </div>
-            <div id="todoBottom" class="col-12 pt-1 d-flex justify-content-center align-items-top">
+            <div id="todoBottom" class="col-12 pt-1 d-flex justify-content-center align-items-top g-0 pe-1">
               <form class="w-100" onsubmit="app.todoController.addTodo()">
                 <input required id="todo" name="description" type="text" class="rounded" maxlength="18">
                 <button type="submit" class="bg-black text-light myBtn rounded">Submit</button>
