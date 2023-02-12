@@ -22,12 +22,11 @@ class TodoService{
   async addTodo(formData) {
     let newTodo = new Todo(formData)
     const res = await sandboxApi.post('/Ry/todos', newTodo)
-    appState.todos.push(newTodo)
+    appState.todos.push(new Todo(res.data))
     appState.emit('todos')
   }
   async getTodos() {
     const res = await sandboxApi.get('/Ry/todos')
-    console.log(res);
     let myTodos = res.data.map(p => new Todo(p))
     appState.todos = myTodos
   }

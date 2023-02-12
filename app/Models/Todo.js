@@ -1,3 +1,4 @@
+import { generateId } from "../Utils/generateId.js"
 
 
 export class Todo{
@@ -27,13 +28,3 @@ export class Todo{
     }
   }
 }
-
-{/* <div class="col-1 offset-1 d-flex align-items-center mt-1 g-0">
-<input type="checkbox" name="" id="" onclick="app.todoController.toggleCompleted('${this.id}')">
-</div>
-<div class="col-8 mt-1 todoDesc">
-<span class="">${this.description}</span>
-</div>
-<div class="col-2 pe-5 mt-1">
-<button type="button" onclick="app.todoController.deleteTodo('${this.id}')" class="btn btn-danger"><i class="mdi mdi-delete"></i></button>
-</div> */}

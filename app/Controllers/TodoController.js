@@ -53,6 +53,7 @@ export class TodoController{
   async deleteTodo(todoID){
     try {
       if (await Pop.confirm('Are you sure you want to delete this TODO?')){
+        debugger
         await todoService.deleteTodo(todoID)
       }
     } catch (error) {
