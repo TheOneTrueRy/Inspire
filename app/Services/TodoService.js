@@ -10,7 +10,8 @@ class TodoService{
     appState.emit('todos')
   }
   async getTodos() {
-    const res = sandboxApi.get('/Ry/todos')
+    const res = await sandboxApi.get('/Ry/todos')
+    console.log(res);
     let myTodos = res.data.map(p => new Todo(p))
     appState.todos = myTodos
   }
