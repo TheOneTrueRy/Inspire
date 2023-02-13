@@ -12,6 +12,7 @@ function _drawWeather(){
     setHTML('temperature', `<span class="fs-4">${appState.temperatureK} K</span>`)
   }
   setHTML('weather', `<span class="fs-5">${appState.weather.description}</span>`)
+  setHTML('weatherIcon', `<img src="${appState.weatherIcon}"></img>`)
 }
 
 export class WeatherController{

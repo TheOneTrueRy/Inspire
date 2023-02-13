@@ -4,13 +4,13 @@ import { isValidProp } from "./Utils/isValidProp.js"
 import { loadState } from "./Utils/Store.js"
 
 class AppState extends EventEmitter {
-
   
   currentTime = null
   
   clockMode = 'standard'
   
   weather = null
+  weatherIcon = null
   temperatureK = null
   temperatureF = null
   temperatureC = null
