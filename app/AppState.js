@@ -1,9 +1,12 @@
+import { User } from "./Models/User.js"
 import { Value } from "./Models/Value.js"
 import { EventEmitter } from "./Utils/EventEmitter.js"
 import { isValidProp } from "./Utils/isValidProp.js"
 import { loadState } from "./Utils/Store.js"
 
 class AppState extends EventEmitter {
+
+  user = loadState('user', User)
   
   currentTime = null
   

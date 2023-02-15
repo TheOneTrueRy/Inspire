@@ -13,9 +13,9 @@ function _drawTodos(){
 
 export class TodoController{
   constructor(){
-    this.getTodos()
-    _drawTodos()
     appState.on('todos', _drawTodos)
+    appState.on('user', this.getTodos)
+    appState.on('user', _drawTodos)
   }
 
   async getTodos(){

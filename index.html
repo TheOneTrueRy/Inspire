@@ -20,9 +20,13 @@
   <main>
     <div class="container-fluid">
       <div id="top" class="row justify-content-between">
-        <div class="col-3 ps-3 pt-2 text-light">
+        <div class="col-2 ps-3 pt-2 text-light">
           <span class="myShadow">Image by</span>
           <p id="imgAuthor" class="myShadow"></p>
+        </div>
+        <div class="col-4 d-flex flex-column align-items-center text-light pt-3">
+          <span id="user" class="fs-4 myShadow"></span>
+          <button class="btn btn-outline-light btn-dark rounded mt-3" type="button" onclick="app.userController.setUser()">Set User</button>
         </div>
         <div class="col-2 d-flex align-items-top justify-content-end pe-5 pt-4 text-light">
           <div id="weatherCard" class="row rounded" onclick="app.weatherController.changeFormat()">

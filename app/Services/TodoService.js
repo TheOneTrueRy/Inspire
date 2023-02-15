@@ -5,7 +5,7 @@ import { sandboxApi } from "./AxiosService.js"
 class TodoService{
   async deleteTodo(todoID) {
     let todoIndex = appState.todos.findIndex(t => t.id == todoID)
-    const res = await sandboxApi.delete(`/Ry/todos/${todoID}`)
+    const res = await sandboxApi.delete(`/${appState.user.name}/todos/${todoID}`)
     appState.todos.splice(todoIndex, 1)
     appState.emit('todos')
   }
@@ -16,17 +16,17 @@ class TodoService{
     }else if(todo.completed == true){
       todo.completed = false
     }
-    const res = await sandboxApi.put(`/Ry/todos/${todoID}`, todo)
+    const res = await sandboxApi.put(`/${appState.user.name}/todos/${todoID}`, todo)
     appState.emit('todos')
   }
   async addTodo(formData) {
     let newTodo = new Todo(formData)
-    const res = await sandboxApi.post('/Ry/todos', newTodo)
+    const res = await sandboxApi.post(`/${appState.user.name}/todos`, newTodo)
     appState.todos.push(new Todo(res.data))
     appState.emit('todos')
   }
   async getTodos() {
-    const res = await sandboxApi.get('/Ry/todos')
+    const res = await sandboxApi.get(`/${appState.user.name}/todos`)
     let myTodos = res.data.map(p => new Todo(p))
     appState.todos = myTodos
   }
